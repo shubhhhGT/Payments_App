@@ -16,8 +16,8 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-repo/payments-app-backend.git
-   cd payments-app-backend
+   git clone https://github.com/shubhhhGT/Payments_App/tree/main/backend.git
+   cd backend
    ```
 
 2. Install the dependencies:
