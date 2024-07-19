@@ -1,13 +1,12 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const accountRoutes = require("./routes/accountRoutes");
 
 app.use(
   cors({
-    origin: "https://payments-app-dusky.vercel.app",
+    origin: "https://payments-app-gamma.vercel.app",
     credentials: true,
   })
 );
@@ -19,7 +18,6 @@ const dbConnect = require("./config/db");
 dbConnect();
 
 // Routes
-app.use("/api/v1/user", authRoutes);
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/account", accountRoutes);
 
