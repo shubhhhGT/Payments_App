@@ -7,7 +7,7 @@ const accountRoutes = require("./routes/accountRoutes");
 
 app.use(
   cors({
-    origin: "https://payments-app-dusky.vercel.app/",
+    origin: "https://payments-app-dusky.vercel.app",
     credentials: true,
   })
 );
