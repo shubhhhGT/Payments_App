@@ -35,5 +35,6 @@ export const signin = async (email, password) => {
     }
   } catch (error) {
     console.log("Login error...", error.message);
+    console.log("Error in login");
   }
 };
