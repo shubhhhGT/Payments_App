@@ -30,7 +30,14 @@ exports.transferBalance = async (req, res) => {
 
     // Get the userId of the account you wish to transfer the amount and the amount
     const { amount, to } = req.body;
-    console.log(typeof amount);
+
+    // Check if amount is negative
+    if (amount <= 0) {
+      await session.abortTransaction();
+      return res
+        .status(400)
+        .json({ message: "Amount cannot be negative/Zero" });
+    }
 
     // Check if the user sending has sufficient balance
     const account = await Account.findOne({ userId: req.userId }).session(
