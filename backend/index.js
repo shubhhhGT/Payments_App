@@ -6,7 +6,8 @@ const accountRoutes = require("./routes/accountRoutes");
 
 app.use(
   cors({
-    origin: "https://payments-app-gamma.vercel.app",
+    // origin: "https://payments-app-gamma.vercel.app",
+    origin: "http://localhost:5173",
     credentials: true,
   })
 );
